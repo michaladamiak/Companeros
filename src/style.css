@@ -29,6 +29,7 @@ a[href^="tel"] {
 #navigation-menu {
     display: none;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     width: 100vw;
     background-color:rgba(82, 82, 82, 0.8);
     /* display: flex; */
