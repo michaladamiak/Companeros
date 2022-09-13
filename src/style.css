@@ -219,7 +219,7 @@ section {
 
 .image {
     width: 40vw;
-    height: 70vh;
+    height: 100%;
     position: absolute;
     right: 0;
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4), -8px -8px 15px rgba(0, 0, 0, 0.4);
@@ -345,7 +345,7 @@ section {
 
     .image {
         width: 65vw;
-        height: 70vh;
+/*         height: 70vh; */
     }
 
     .title {
