@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -25,6 +29,7 @@ a[href^="tel"] {
     overflow-y: scroll;
     display: inherit;
     /* display: none; */
+    -webkit-overflow-scrolling: touch;
 }
 
 #navigation-menu {
