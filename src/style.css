@@ -166,7 +166,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 0 20px;
     height: 50px;
     width: 150px;
     border-radius: 25px;
@@ -370,7 +370,7 @@ section {
         width: 120px;
         border-radius: 20px;
         font-size: 14px;
-        margin: 0 0 40px 0;
+        margin: 0 10px;
     }
 
     .contact-page {
