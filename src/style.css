@@ -155,6 +155,7 @@ section {
     align-items: center;
     scroll-snap-align: start;
     background-color:rgba(82, 82, 82, 0.6);
+    scroll-snap-stop: always;
 }
 
 .btn {
