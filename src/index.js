@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    
-//     function scrollWin() {  window.scrollTo(0, 0);}
+    let slideMenuIn = window.innerHeight*1.4
+    let slideMenuOut = window.innerHeight*1.7
+    let slideKoktajleIn = window.innerHeight*2.4
+    let slideKoktajleOut = window.innerHeight*2.7
+    let slideKontakt = window.innerHeight*3.5
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
@@ -13,8 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // We execute the same script as before
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+    let slideMenuIn = window.innerHeight*1.4
+    let slideMenuOut = window.innerHeight*1.7
+    let slideKoktajleIn = window.innerHeight*2.4
+    let slideKoktajleOut = window.innerHeight*2.7
+    let slideKontakt = window.innerHeight*3.5
     });
-
 
     // jakoś działa ale bez szału
     // window.onresize = function() {
@@ -32,7 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const navigation = document.querySelector('#navigation-menu');
     const navigationElements = document.querySelectorAll('.navigation-element');
 
-    function debounce(func, wait = 15, immediate = true) {
+
+
+    // var wheelDistance = function(evt) {
+     
+    //     // wheelDelta indicates how
+    //     // Far the wheel is turned
+    //     var w = evt.wheelDelta;
+             
+    //     // Returning normalized value
+    //     return w / 10;
+    // }
+     
+    // // Adding event listener for some element
+    // container.addEventListener("wheel", wheelDistance);
+
+
+
+
+    function debounce(func, wait = 10, immediate = true) {
         var timeout;
         return function() {
             var context = this, args = arguments;
@@ -47,24 +72,50 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     };
 
+    // stare razem z chowaniem po slajdzie
+
+    // function checklSlide(event) {
+    //     const slideMenu = window.innerHeight*1.5
+    //     menuSlides.forEach(element => {
+    //         if ((container.scrollTop + window.innerHeight)> slideMenu && container.scrollTop < slideMenu) {
+    //             element.classList.add('active');
+    //         } else {
+    //             element.classList.remove('active');
+    //         }
+    //     });
+    //     koktajleSlides.forEach(element => {
+    //         const slideKoktajle = window.innerHeight*2.5
+    //         if ((container.scrollTop + window.innerHeight)> slideKoktajle && container.scrollTop < slideKoktajle) {
+    //             element.classList.add('active');
+    //         } else {
+    //             element.classList.remove('active');
+    //         }
+    //     });
+    //     const slideKontakt = window.innerHeight*3.5
+    //     if ((container.scrollTop + window.innerHeight)> slideKontakt) {
+    //         kontaktSlide.classList.add('contact-page-active');
+    //     } else {
+    //         kontaktSlide.classList.remove('contact-page-active');
+    //     }
+    // }
+
+
+
     function checklSlide(event) {
-        const slideMenu = window.innerHeight*1.5
         menuSlides.forEach(element => {
-            if ((container.scrollTop + window.innerHeight)> slideMenu && container.scrollTop < slideMenu) {
+            if ((container.scrollTop + window.innerHeight)> slideMenuIn && container.scrollTop < slideMenuOut) {
                 element.classList.add('active');
             } else {
                 element.classList.remove('active');
             }
         });
         koktajleSlides.forEach(element => {
-            const slideKoktajle = window.innerHeight*2.5
-            if ((container.scrollTop + window.innerHeight)> slideKoktajle && container.scrollTop < slideKoktajle) {
+            if ((container.scrollTop + window.innerHeight)> slideKoktajleIn && container.scrollTop < slideKoktajleOut) {
                 element.classList.add('active');
             } else {
                 element.classList.remove('active');
             }
         });
-        const slideKontakt = window.innerHeight*3.5
         if ((container.scrollTop + window.innerHeight)> slideKontakt) {
             kontaktSlide.classList.add('contact-page-active');
         } else {
