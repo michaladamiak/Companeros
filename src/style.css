@@ -176,13 +176,6 @@ section {
     color: black;
 }
 
-#logo-home {
-    width: 40%;
-    max-width: 250px;
-    animation: logo-anim 0.6s;
-    filter: drop-shadow(0.1em 0.1em 15px rgba(0, 0, 0, 1));
-}
-
 @keyframes logo-anim {
     from {
         opacity: 0.5;
@@ -192,6 +185,15 @@ section {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+#logo-home {
+    width: 40%;
+    max-width: 250px;
+    opacity: 0.5;
+    transform: scale(0.9);
+    animation: logo-anim 0.6s;
+    filter: drop-shadow(0.1em 0.1em 15px rgba(0, 0, 0, 1));
 }
 
 .page {
