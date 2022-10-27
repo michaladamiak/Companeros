@@ -193,6 +193,7 @@ section {
     opacity: 0.5;
     transform: scale(0.9);
     animation: logo-anim 0.6s;
+    animation-fill-mode: forwards;
     filter: drop-shadow(0.1em 0.1em 15px rgba(0, 0, 0, 1));
 }
 
